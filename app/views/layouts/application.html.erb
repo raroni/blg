@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title><%= BlogConfig[:title] %></title>
   <%= stylesheet_link_tag 'default' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+	<%= yield %>
 </body>
 </html>
