@@ -1,0 +1,8 @@
+default:
+  title: 'This is my blog!'
+development:
+  place_holder: 1
+test:
+  place_holder: 1
+production:
+  place_holder: 1
