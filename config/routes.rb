@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do |map|
+  resources :posts
+
   resources :users, :except => [:show, :destroy]
   
   get 'login', :to => 'sessions#new'
