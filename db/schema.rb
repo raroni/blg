@@ -12,11 +12,12 @@
 ActiveRecord::Schema.define(:version => 20100509185614) do
 
   create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.text     "text"
-    t.integer  "user_id"
-    t.boolean  "published"
-    t.string   "permalink"
+    t.string   "title",      :null => false
+    t.text     "excerpt"
+    t.text     "content",    :null => false
+    t.integer  "user_id",    :null => false
+    t.boolean  "published",  :null => false
+    t.string   "permalink",  :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
