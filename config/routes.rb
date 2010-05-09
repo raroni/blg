@@ -1,5 +1,5 @@
 Blog::Application.routes.draw do |map|
-  resources :users, :except => [:edit, :update]
+  resources :users, :except => [:edit, :update, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
