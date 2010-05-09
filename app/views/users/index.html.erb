@@ -2,7 +2,7 @@
 
 <p><%= link_to 'Create new user', new_user_path %></p>
 
-<% if @users.all.any? %>
+<% if @users.any? %>
 	<% for user in @users %>
 		<div><%= user.name %></div>
 	<% end %>
