@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  validates :name, :email, :encrypted_password, :presence => true
+  
   def password
   end
   
