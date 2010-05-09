@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20100509180415) do
     t.string   "email"
     t.string   "encrypted_password"
     t.string   "password_salt"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
