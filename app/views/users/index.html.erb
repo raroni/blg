@@ -1,0 +1,9 @@
+<p><%= link_to 'Create new user', new_user_path %></p>
+
+<% if @users.all.any? %>
+	<% for user in @users %>
+		<div><%= user.name %></div>
+	<% end %>
+<% else %>
+	<p>No users found.</p>
+<% end %>
