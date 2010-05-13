@@ -25,8 +25,8 @@ table th {
 .post h2 {
 	margin-bottom: 5px;
 }
-.post .author {
-	margin-bottom: 10px;
+.post .content {
+	margin-top: 10px;
 }
 .manage_posts table {
 	width: 100%;
