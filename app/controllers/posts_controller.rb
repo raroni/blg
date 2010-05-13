@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authenticate!, :only => [:new, :create]
+  before_filter :authenticate!, :only => [:new, :create, :manage]
   
   def index
     @posts = Post.published.order('id desc')
@@ -7,6 +7,10 @@ class PostsController < ApplicationController
   
   def new
     @post = Post.new
+  end
+  
+  def manage
+    @posts = Post.scoped
   end
   
   def create

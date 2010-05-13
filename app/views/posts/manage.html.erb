@@ -1,0 +1,25 @@
+<div class="manage_posts">
+	<%= link_to 'Create new post', new_post_path %>
+	<% if @posts.any? %>
+		<table>
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Content</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% for post in @posts %>
+					<tr>
+						<td><%= link_to_post post %></td>
+						<td><%= truncate post.content %></td>
+						<td><%= link_to 'Destroy', post %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	<% else %>
+		<p>No posts found.</p>
+	<% end %>
+</div>
