@@ -1,5 +1,5 @@
 Blg::Application.routes.draw do |map|
-  resources :posts, :except => :show
+  resources :posts, :except => [:show, :index]
   resources :users, :except => [:show, :destroy]
   
   get 'login', :to => 'sessions#new'

@@ -21,5 +21,6 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find_by_permalink params[:permalink]
+    redirect_to root_path, :error => 'Page not found.' unless @post
   end
 end
