@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :authenticate!, :only => [:new, :create]
   
   def index
-    @posts = Post.all
+    @posts = Post.published
   end
   
   def new
@@ -17,5 +17,9 @@ class PostsController < ApplicationController
     else
       render :action => 'new'
     end
+  end
+  
+  def show
+    @post = Post.find_by_permalink params[:permalink]
   end
 end
