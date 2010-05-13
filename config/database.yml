@@ -1,13 +1,13 @@
 development:
   adapter: mysql
-  database: blog
+  database: blg
   pool: 5
   timeout: 5000
   user: root
 
 development:
   adapter: mysql
-  database: blog_test
+  database: blg_test
   pool: 5
   timeout: 5000
   user: root
