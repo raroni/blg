@@ -1,11 +1,14 @@
-<h1>Posts</h1>
-
-<p><%= link_to 'Create new post', new_post_path %></p>
-
-<% if @posts.any? %>
-	<% for post in @posts %>
-		<div><%= link_to_post post %></div>
+<div class="posts">
+	<% if @posts.any? %>
+		<% for post in @posts %>
+			<div class="post">
+				<h2><%= link_to_post post %></h2>
+				<div class="excerpt">
+					<%= post.excerpt %>
+				</div>
+			</div>
+		<% end %>
+	<% else %>
+		<p>No posts found.</p>
 	<% end %>
-<% else %>
-	<p>No posts found.</p>
-<% end %>
+</div>
