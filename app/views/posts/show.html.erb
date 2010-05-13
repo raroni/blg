@@ -6,10 +6,10 @@
 	<% if logged_in? %>
 		<div class="actions">
 			<%= link_to 'Edit', edit_post_path(@post) %> |
-			<%= link_to_delete_post(post) %>
+			<%= link_to_delete_post(@post) %>
 		</div>
 	<% end %>
 	<div class="content">
-		<%= coderay @post.content %>
+		<%= textilize(coderay(@post.content)).html_safe %>
 	</div>
 </div>
