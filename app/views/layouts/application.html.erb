@@ -7,6 +7,9 @@
 	<%= csrf_meta_tag %>
 </head>
 <body>
-	<%= yield %>
+	<div id="page">
+		<%= yield %>
+		<%= link_to('Logout', logout_path) if logged_in? %>
+	</div>
 </body>
 </html>
