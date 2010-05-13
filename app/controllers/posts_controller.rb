@@ -16,12 +16,12 @@ class PostsController < ApplicationController
   
   def destroy
     @post.destroy
-    redirect_to manage_posts_path
+    redirect_to manage_posts_path, :notice => 'Post deleted.'
   end
   
   def update
     if @post.update_attributes params[:post]
-      redirect_to manage_posts_path
+      redirect_to manage_posts_path, :notice => 'Post updated.'
     else
       render :action => :edit
     end
