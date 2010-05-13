@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :authenticate!, :only => [:new, :create]
   
   def index
-    @posts = Post.published
+    @posts = Post.published.order('id desc')
   end
   
   def new
