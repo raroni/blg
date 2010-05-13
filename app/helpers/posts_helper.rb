@@ -1,6 +1,6 @@
 module PostsHelper
   def link_to_post(post)
-    link_to post.title, "/#{post.permalink}"
+    link_to post.title, public_post_path(post)
   end
   
   def link_to_delete_post(post)

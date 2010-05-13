@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   
   def update
     if @post.update_attributes params[:post]
-      redirect_to manage_posts_path, :notice => 'Post updated.'
+      redirect_to public_post_path(@post), :notice => 'Post updated.'
     else
       render :action => :edit
     end
