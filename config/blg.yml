@@ -1,5 +1,5 @@
 default:
-  title: 'This is my blog!'
+  title: 'BLOG TITLE'
 development:
   place_holder: 1
 test:
