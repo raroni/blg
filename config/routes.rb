@@ -1,5 +1,5 @@
 Blg::Application.routes.draw do |map|
-  resources :posts, :except => [:show, :index, :delete] do
+  resources :posts, :except => [:show, :index, :destroy] do
     get :manage, :on => :collection
   end
   
