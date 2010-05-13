@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     @post = Post.new params[:post]
     @post.user = current_user
     if @post.save
-      redirect_to users_path, :notice => 'Post created.'
+      redirect_to posts_path, :notice => 'Post created.'
     else
       render :action => 'new'
     end
