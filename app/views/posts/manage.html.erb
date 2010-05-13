@@ -14,7 +14,7 @@
 					<tr>
 						<td><%= link_to_post post %></td>
 						<td><%= truncate post.content %></td>
-						<td class="actions"><%= link_to_delete_post post %></td>
+						<td class="actions"><%= link_to_edit_post post %> | <%= link_to_delete_post post %></td>
 					</tr>
 				<% end %>
 			</tbody>

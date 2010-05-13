@@ -12,6 +12,14 @@
 			<h1><%= link_to BlgConfig[:title], root_path %></h1>
 		</div>
 		<div id="main">
+			<% if flash[:notice] %>
+				<div class="notice"><%= flash[:notice] %></div>
+			<% end %>
+			
+			<% if flash[:alert] %>
+				<div class="alert"><%= flash[:alert] %></div>
+			<% end %>
+			
 			<%= yield %>
 			<%= link_to('Logout', logout_path) if logged_in? %>
 		</div>

@@ -22,6 +22,21 @@ table th {
 	width: 800px;
 	margin: 0 auto;
 }
+#main > .notice, #main > .alert {
+	margin: 10px 0px;
+	font-size: 20px;
+	padding: 15px 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+#main > .notice {
+	background-color: #4dac1b;
+	color: #ffffff;
+}
+#main > .alert {
+	background-color: #ac1b1b;
+	color: #ffffff;
+}
 .post h2 {
 	margin-bottom: 5px;
 }

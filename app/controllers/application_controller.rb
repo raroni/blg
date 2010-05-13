@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
   end
   
   def authenticate!
-    redirect_to root_path, :error => 'You must login to access this page.' unless logged_in?
+    redirect_to root_path, :alert => 'You must login to access this page.' unless logged_in?
   end
 end

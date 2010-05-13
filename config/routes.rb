@@ -1,5 +1,5 @@
 Blg::Application.routes.draw do |map|
-  resources :posts, :except => [:show, :index, :destroy] do
+  resources :posts, :except => :show do
     get :manage, :on => :collection
   end
   
@@ -11,6 +11,5 @@ Blg::Application.routes.draw do |map|
   
   root :to => 'posts#index'
   
-  get ':permalink', :to => 'posts#show', :as => :post
-  delete ':permalink', :to => 'posts#destroy'
+  get ':permalink', :to => 'posts#show'
 end
