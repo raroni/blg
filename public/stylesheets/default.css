@@ -11,6 +11,13 @@ h1 a {
 h2 a {
 	color: #656565;
 }
+table th {
+	text-align: left;
+	border-bottom: 1px solid #9b9b9b;
+	color: #656565;
+	font-weight: normal;
+	font-size: 13px;
+}
 #page {
 	width: 800px;
 	margin: 0 auto;
@@ -20,4 +27,10 @@ h2 a {
 }
 .post .author {
 	margin-bottom: 10px;
+}
+.manage_posts table {
+	width: 100%;
+}
+.manage_posts table tbody .actions {
+	text-align: center;
 }
