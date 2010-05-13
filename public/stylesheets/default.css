@@ -6,8 +6,15 @@ h1 {
 }
 h1 a {
 	text-decoration: none;
+	color: #000000;
 }
 #page {
 	width: 800px;
 	margin: 0 auto;
+}
+.post h2 {
+	margin-bottom: 5px;
+}
+.post .author {
+	margin-bottom: 10px;
 }
