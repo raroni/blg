@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_email params[:email]
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to root_path, :notice => "You're now logged in."
+      redirect_to manage_posts_path, :notice => "You're now logged in."
     else
       render :action => :new
     end
