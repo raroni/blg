@@ -1,0 +1,15 @@
+<div class="post">
+	<h2><%= link_to_post post %></h2>
+	<div class="author">
+		Written by <%= post.user.name %>
+	</div>
+	<% if logged_in? %>
+		<div class="actions">
+			<%= link_to_edit_post post %> |
+			<%= link_to_delete_post @post %>
+		</div>
+	<% end %>
+	<div class="content">
+		<%= textilize(coderay(post.content)).html_safe %>
+	</div>
+</div>
