@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
   
   def manage
-    @posts = Post.scoped
+    @posts = Post.order 'id desc'
   end
   
   def destroy

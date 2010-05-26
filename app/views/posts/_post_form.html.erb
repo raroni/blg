@@ -1,0 +1,28 @@
+<div class="post_editor">
+	<%= form_for @post do |f| %>
+		<p>
+			<%= f.label :title %><br />
+			<%= f.text_field :title %>
+		</p>
+	
+		<p>
+			<%= f.label :content %><br />
+			<%= f.text_area :content %>
+		</p>
+	
+		<p class="published">
+			<%= f.label :published %>
+			<%= f.check_box :published %>
+		</p>
+	
+		<p class="published_at">
+			<%= f.label :published_at %><br />
+			<%= f.date_select :published_at %>
+		</p>
+	
+		<p>
+			<%= f.submit %> <%= link_to 'Cancel', request.referer %>
+		</p>
+	<% end %>
+</div>
+<%= javascript_include_tag 'blg/posts/post_editor' %>

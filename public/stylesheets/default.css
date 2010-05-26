@@ -46,6 +46,7 @@ table th {
 }
 .post .content {
 	margin-top: 10px;
+	margin-bottom: 40px;
 }
 .manage_posts table {
 	width: 100%;

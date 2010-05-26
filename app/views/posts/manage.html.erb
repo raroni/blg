@@ -6,6 +6,7 @@
 				<tr>
 					<th>Title</th>
 					<th>Content</th>
+					<th>Published</th>
 					<th>&nbsp;</th>
 				</tr>
 			</thead>
@@ -14,6 +15,7 @@
 					<tr>
 						<td><%= link_to_post post %></td>
 						<td><%= truncate post.content %></td>
+						<td><%= post.published? ? 'Yes' : 'No' %></td>
 						<td class="actions"><%= link_to_edit_post post %> | <%= link_to_delete_post post %></td>
 					</tr>
 				<% end %>
