@@ -21,8 +21,13 @@
 			<% end %>
 			
 			<%= yield %>
-			<%= link_to('Logout', logout_path) if logged_in? %>
 		</div>
+		<% if logged_in? %>
+			<div class="admin">
+				<%= link_to 'Posts overview', manage_posts_path %><br />
+				<%= link_to 'Logout', logout_path %>
+			</div>
+		<% end %>
 	</div>
 </body>
 </html>

@@ -38,6 +38,11 @@ table th {
 	background-color: #ac1b1b;
 	color: #ffffff;
 }
+#page > .admin {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
 .post h2 {
 	margin-bottom: 3px;
 }
