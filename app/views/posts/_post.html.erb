@@ -2,6 +2,9 @@
 	<h2><%= link_to_post post %></h2>
 	<div class="author">
 		Written by <%= post.user.name %>
+		<% if post.published? %>
+			, <%= l post.published_at.to_date %>
+		<% end %>
 	</div>
 	<% if logged_in? %>
 		<div class="actions">
