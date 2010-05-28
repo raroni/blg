@@ -1,6 +1,9 @@
 body {
 	font-family: georgia;
 }
+a {
+	color: #1111da;
+}
 h1 {
 	border-bottom: 1px solid #000000;
 }
