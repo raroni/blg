@@ -16,4 +16,7 @@
 	<div class="text">
 		<%= textilize(comment.text).html_safe %>
 	</div>
+	<% if logged_in? %>
+		<p><%= link_to 'Delete comment', [@post, comment], :method => :delete %></p>
+	<% end %>
 </div>
