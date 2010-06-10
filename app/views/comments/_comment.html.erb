@@ -1,0 +1,19 @@
+<div class="comment">
+	<div class="metadata">
+		<span class="author">
+			<% if comment.website? %>
+				<%= link_to comment.name, comment.website %>
+			<% elsif comment.name? %>
+				<%= comment.name %>
+			<% else %>
+				<em>Anonymous</em>
+			<% end %>
+		</span>
+		<span class="creation">
+			<%= l comment.created_at %>
+		</span>
+	</div>
+	<div class="text">
+		<%= textilize(comment.text).html_safe %>
+	</div>
+</div>

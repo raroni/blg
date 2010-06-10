@@ -30,6 +30,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by_permalink params[:permalink]
     redirect_to root_path, :alert => 'Page not found.' unless @post
+    @comments = @post.comments
+    @new_comment = Comment.new
   end
   
   def create

@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
+  has_many :comments
   has_permalink :title
   
   scope :published, where('published_at < ?', Time.now)

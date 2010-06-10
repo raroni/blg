@@ -1,2 +1,41 @@
 <% content_for :title, @post.title %>
 <%= render @post %>
+<div class="comments">
+	<h3>
+		Comments
+		<span>(<%= @comments.size %>)
+	</h3>
+	<% if @comments.any? %>
+		<%= render @comments %>
+	<% else %>
+		<p>No comments so far.</p>
+	<% end %>
+	<hr />
+	<div class="new_comment">
+		<h4>Write a comment</h4>
+		<%= form_for [@post, @new_comment] do |f| %>
+			<p>
+				<%= f.label :name %><br />
+				<%= f.text_field :name %>
+			</p>
+		
+			<p>
+				<%= f.label :email %><br />
+				<%= f.text_field :email %>
+			</p>
+		
+			<p>
+				<%= f.label :website %><br />
+				<%= f.text_field :website %>
+			</p>
+		
+			<p>
+				<%= f.text_area :text %>
+			</p>
+		
+			<p>
+				<%= f.submit 'Post comment' %>
+			</p>
+		<% end %>
+	</div>
+</div>
