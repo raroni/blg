@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   has_permalink :title
   
   scope :published, where('published_at < ?', Time.now)
+  validates :title, :presence => true
   
   def published?
     published

@@ -1,5 +1,6 @@
 <div class="post_editor">
 	<%= form_for @post do |f| %>
+		<%= error_messages @post %>
 		<p>
 			<%= f.label :title %><br />
 			<%= f.text_field :title %>
