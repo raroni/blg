@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_filter :prepare_post, :only => [:edit, :destroy, :update]
   
   def index
-    @posts = Post.published.order('id desc')
+    @posts = Post.published.order('published_at desc')
   end
   
   def new
